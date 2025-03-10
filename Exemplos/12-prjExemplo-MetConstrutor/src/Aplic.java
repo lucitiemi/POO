@@ -1,3 +1,4 @@
+import fatec.poo.model.Retangulo;
 import java.util.Scanner;
 
 /**
@@ -18,7 +19,7 @@ public class Aplic {
         //criação do ponteiro,
         //instanciação(alocação) de um objeto da classe Retangulo
         //e chamada do método construtor
-        
+        Retangulo objRet = new Retangulo(unidade);
         
         
         System.out.print("Digite a medida da altura: ");
@@ -31,10 +32,11 @@ public class Aplic {
         objRet.setAltura(medAlt);
         objRet.setBase(medBase);
        
-        System.out.println("Medida da altura: " + objRet.getAltura());
-        System.out.println("Medida da base: " + objRet.getBase());
-        System.out.println("Medida da área: " + objRet.calcArea());
-        System.out.println("Medida do perímetro: " + objRet.calcPerimetro());
-        System.out.println("Medida da diagonal: " + objRet.calcDiagonal());
+        System.out.println("\n\nDADOS DO RETANGULO\n");
+        System.out.println("Medida da altura: " + objRet.getAltura() + " " + objRet.getUnidadeMedida());
+        System.out.println("Medida da base: " + objRet.getBase() + " " + objRet.getUnidadeMedida());
+        System.out.println("Medida da área: " + objRet.calcArea() + " " + objRet.getUnidadeMedida() + "²");
+        System.out.println("Medida do perímetro: " + objRet.calcPerimetro() + " " + objRet.getUnidadeMedida());
+        System.out.println("Medida da diagonal: " + objRet.calcDiagonal() + " " + objRet.getUnidadeMedida());
     }    
 }
