@@ -44,14 +44,22 @@ public class Aluno {
     }
     
     public double calcMediaProva(){
-        return (.75*((ntPrv1 + 2*ntPrv2)/3));
+        return (.75*(ntPrv1 + 2*ntPrv2)/3);
     }
     
     public double calcMediaTrab(){
-        return (.25*((ntTrab1 + ntTrab2)/2));
+        return (.25*(ntTrab1 + ntTrab2)/2);
     }
     
     public double calcMediaFinal(){
         return (calcMediaProva() + calcMediaTrab());
+    }
+    
+    public boolean isAprovado(){
+        if (calcMediaFinal() >= 6){
+            return true;
+        }else {
+            return false;
+        }
     }
 }

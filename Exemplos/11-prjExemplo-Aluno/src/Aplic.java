@@ -60,9 +60,14 @@ public class Aplic {
                 case 3: // media final
                     System.out.println("\nRA do aluno: " + aluno.getRa());
                     System.out.println("Média Final: " + aluno.calcMediaFinal());
+                    if (aluno.isAprovado()){
+                        System.out.println("\nSituação: ALUNO APROVADO!\n");
+                    }else {
+                        System.out.println("\nSituação: ALUNO REPROVADO!\n");
+                    }
                     break;
                 case 4: // sair
-                    System.out.println("\nFim do programa!");
+                    System.out.println("\nFim do programa!\n");
                     break;
                 default:
                     System.out.println("\nValor inválido! Digite outra opção.");
