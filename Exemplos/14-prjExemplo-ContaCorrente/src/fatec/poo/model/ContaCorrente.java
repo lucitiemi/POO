@@ -19,15 +19,12 @@ public class ContaCorrente {
     public double getSaldo(){
         return saldo;
     }
-    public void setSaldo(double sal){
-        saldo = sal;
-    }
     
     public void sacar(double valor){
-        saldo = saldo - valor;
+        saldo -= valor; //saldo = saldo - valor;
     }
     public void depositar(double valor){
-        saldo = saldo + valor;
+        saldo += valor;  //saldo = saldo + valor;
     }
     
     
