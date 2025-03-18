@@ -8,8 +8,8 @@ public class FuncionarioHorista extends Funcionario {
     private double valHorTrab;
     private int qtdeHorTrab;
     
-    public FuncionarioHorista(int r, String n, String dtAdm, double vht){
-        super(r, n, dtAdm);
+    public FuncionarioHorista(int r, String n, String dtAdm, String c, double vht){
+        super(r, n, dtAdm, c);
         valHorTrab = vht;
     }
     

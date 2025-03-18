@@ -10,10 +10,11 @@ public abstract class Funcionario {
     private String dtAdmissao;
     private String cargo;
     
-    public Funcionario(int r, String n, String dtAdm) {
+    public Funcionario(int r, String n, String dtAdm, String c) {
         registro = r;
         nome = n;
         dtAdmissao = dtAdm;
+        cargo = c;
     }
     
     public int getRegistro(){
