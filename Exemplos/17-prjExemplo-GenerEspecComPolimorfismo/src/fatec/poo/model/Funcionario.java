@@ -10,11 +10,10 @@ public abstract class Funcionario {
     private String dtAdmissao;
     private String cargo;
     
-    public Funcionario(int r, String n, String dtAdm, String c) {
+    public Funcionario(int r, String n, String dtAdm) {
         registro = r;
         nome = n;
         dtAdmissao = dtAdm;
-        cargo = c;
     }
     
     public int getRegistro(){
@@ -32,6 +31,10 @@ public abstract class Funcionario {
     public String getCargo(){
         return cargo;
     }
+    
+    public void setCargo(String c){
+        cargo = c;
+    }
      
     abstract public double calcSalBruto();
         
@@ -39,5 +42,7 @@ public abstract class Funcionario {
         return (0.10 * calcSalBruto());
     }
     
-    abstract public double calcSalLiquido();
+    public double calcSalLiquido(){
+        return (calcSalBruto() - calcDesconto());
+    }
 }

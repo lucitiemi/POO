@@ -8,8 +8,8 @@ public class FuncionarioMensalista extends Funcionario {
     private double valSalMin;
     private double numSalMin;
     
-    public FuncionarioMensalista(int r, String n, String dtAdm, String c, double vsm){
-        super(r, n, dtAdm, c);
+    public FuncionarioMensalista(int r, String n, String dtAdm, double vsm){
+        super(r, n, dtAdm);
         valSalMin = vsm;
     }
     
@@ -23,8 +23,4 @@ public class FuncionarioMensalista extends Funcionario {
         return (valSalMin * numSalMin);
     }
     
-    @Override
-    public double calcSalLiquido(){
-        return (calcSalBruto() - calcDesconto());
-    }
 }

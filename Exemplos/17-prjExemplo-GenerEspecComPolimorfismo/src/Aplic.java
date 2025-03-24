@@ -11,11 +11,13 @@ public class Aplic {
     public static void main(String[] args) {
         
         DecimalFormat df = new DecimalFormat("#,##0.00");
-        FuncionarioHorista funcHor = new FuncionarioHorista(1010, "Pedro Silveira", "14/05/1978", "Auxiliar de produção", 15.80);
-        FuncionarioMensalista funcMens = new FuncionarioMensalista(1011, "Marcia Oliveira", "06/12/2000", "Gerente", 1200.00);
+        FuncionarioHorista funcHor = new FuncionarioHorista(1010, "Pedro Silveira", "14/05/1978", 15.80);
+        FuncionarioMensalista funcMens = new FuncionarioMensalista(1011, "Marcia Oliveira", "06/12/2000", 1200.00);
         
         funcHor.setQtdeHorTrab(90);
+        funcHor.setCargo("Auxiliar de produção");
         funcMens.setNumSalMin(5);
+        funcMens.setCargo("Gerente");
         
         System.out.println("\nFUNCIONARIO HORISTA");
         System.out.println("Registro:        " + funcHor.getRegistro());

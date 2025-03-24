@@ -8,8 +8,8 @@ public class FuncionarioHorista extends Funcionario {
     private double valHorTrab;
     private int qtdeHorTrab;
     
-    public FuncionarioHorista(int r, String n, String dtAdm, String c, double vht){
-        super(r, n, dtAdm, c);
+    public FuncionarioHorista(int r, String n, String dtAdm, double vht){
+        super(r, n, dtAdm);
         valHorTrab = vht;
     }
     
@@ -27,8 +27,9 @@ public class FuncionarioHorista extends Funcionario {
         return (calcSalBruto() * 0.075);
     }
     
+    // aplicacao do polimorfismo - sobrescrevendo parcialmente o código 
     @Override
     public double calcSalLiquido(){
-        return (calcSalBruto() + calcGratificacao() - calcDesconto());
+        return (super.calcSalLiquido() + calcGratificacao());
     }
 }
