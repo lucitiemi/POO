@@ -9,13 +9,16 @@ abstract public class Funcionario {
     private String nome;
     private String dtAdmissao;  
     private String cargo;
+    private Departamento departamento; // definicao do ponteiro para multiplicidade 1
     
+    // construtor
     public Funcionario(int r, String n, String dtAdm){
         registro = r;
         nome = n;
         dtAdmissao = dtAdm;  
     }   
     
+    // getters e setters
     public int getRegistro(){
         return(registro);
     }
@@ -31,7 +34,16 @@ abstract public class Funcionario {
     public void setCargo(String c){
         cargo = c;
     }
-    
+
+    public Departamento getDepartamento() {
+        return departamento; // retorna o endereco de um objeto da classe Departamento
+    }
+
+    public void setDepartamento(Departamento departamento) {  // recebe como parametro o endereco de um objeto da classe Departamento
+        this.departamento = departamento;
+    }
+      
+    // outros metodos
     public abstract double calcSalBruto();
     
     public double calcDesconto(){

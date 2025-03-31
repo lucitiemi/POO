@@ -16,6 +16,7 @@ public class Aplic {
         DecimalFormat df = new DecimalFormat("#,##0.00");
         String c, n;
         int a;
+        double compra;
                
         System.out.println("-- ENTRADA DE DADOS - PESSOA FÍSICA --");
         System.out.print("Digite o nome: ");
@@ -48,14 +49,26 @@ public class Aplic {
         
         System.out.println("\n----------------------------------------");
         
+        System.out.println("\n-- COMPRAS - PESSOA FÍSICA --");
+        do {
+            System.out.print("Digite o valor da compra: ");
+            compra = entrada.nextDouble();
+            pf.addCompras(compra);
+        } while (compra != 0);
         
-        // implementar o while!!!
+        System.out.println("\n\n-- COMPRAS - PESSOA JURÍDICA --");
+        do {
+            System.out.print("Digite o valor da compra: ");
+            compra = entrada.nextDouble();
+            pj.addCompras(compra);
+        } while (compra != 0);
         
+        System.out.println("\n----------------------------------------");
         
         System.out.println("\nRESUMO PESSOA FÍSICA");
         System.out.println("Nome:              " + pf.getNome());
         System.out.println("CPF:               " + pf.getCpf());
-        System.out.println("Ano de Inscrição:  " + pf.getNome());
+        System.out.println("Ano de Inscrição:  " + pf.getAnoInscricao());
         System.out.println("Base:              " + df.format(pf.getBase()));
         System.out.println("Total compras:     " + df.format(pf.getTotalCompras()));
         System.out.println("Bônus:             " + df.format(pf.calcBonus(a)));
@@ -63,7 +76,7 @@ public class Aplic {
         System.out.println("\n\nRESUMO PESSOA JURÍDICA");
         System.out.println("Nome:              " + pj.getNome());
         System.out.println("CGC:               " + pj.getCgc());
-        System.out.println("Ano de Inscrição:  " + pj.getNome());
+        System.out.println("Ano de Inscrição:  " + pj.getAnoInscricao());
         System.out.println("Taxa de Incentivo: " + df.format(pj.getTaxaIncentivo()) + "%");
         System.out.println("Total compras:     " + df.format(pj.getTotalCompras()));
         System.out.println("Bônus:             " + df.format(pj.calcBonus(a)));
