@@ -18,6 +18,7 @@ abstract public class Funcionario {
         dtAdmissao = dtAdm;  
     }   
     
+    
     // getters e setters
     public int getRegistro(){
         return(registro);
@@ -34,15 +35,18 @@ abstract public class Funcionario {
     public void setCargo(String c){
         cargo = c;
     }
-
+    
+    // retorna o endereco de um objeto da classe Departamento
     public Departamento getDepartamento() {
-        return departamento; // retorna o endereco de um objeto da classe Departamento
+        return departamento; 
     }
 
-    public void setDepartamento(Departamento departamento) {  // recebe como parametro o endereco de um objeto da classe Departamento
+    // recebe como parametro o endereco de um objeto da classe Departamento
+    public void setDepartamento(Departamento departamento) {  
         this.departamento = departamento;
     }
-      
+    
+    
     // outros metodos
     public abstract double calcSalBruto();
     
