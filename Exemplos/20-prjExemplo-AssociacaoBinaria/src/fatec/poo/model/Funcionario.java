@@ -10,6 +10,7 @@ abstract public class Funcionario {
     private String dtAdmissao;  
     private String cargo;
     private Departamento departamento; // definicao do ponteiro para multiplicidade 1
+    private Projeto projeto;
     
     // construtor
     public Funcionario(int r, String n, String dtAdm){
@@ -40,10 +41,17 @@ abstract public class Funcionario {
     public Departamento getDepartamento() {
         return departamento; 
     }
-
     // recebe como parametro o endereco de um objeto da classe Departamento
     public void setDepartamento(Departamento departamento) {  
         this.departamento = departamento;
+    }
+    // retorna o endereco de um objeto da classe Projeto
+    public Projeto getProjeto() {
+        return projeto; 
+    }
+    // recebe como parametro o endereco de um objeto da classe Projeto
+    public void setProjeto(Projeto projeto) {  
+        this.projeto = projeto;
     }
     
     

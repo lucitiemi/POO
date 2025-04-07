@@ -55,8 +55,7 @@ public class Projeto {
     
     // outros metodos
     public void addFuncionario(Funcionario f) {
-        funcionarios[numFunc] = f;
-        numFunc++;
+        funcionarios[numFunc++] = f;
     }
     
     public void listarFuncionarios(){

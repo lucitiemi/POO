@@ -62,10 +62,20 @@ public class Aplic {
         System.out.println("\n\n-- LISTA FUNCIONÁRIOS DEPARTAMENTO DE VENDAS --\n");
         dep2.listarFuncionarios();
         
-        
+        System.out.println("\n\n");
         
         // criando o projeto e colocando os funcionarios associados
         Projeto proj1 = new Projeto(8080, "Implementação novo sistema");
+        
+        funcMen.setProjeto(proj1);
+        System.out.println("O funcionario mensalista " + funcMen.getNome() + 
+                           " está alocado no projeto " + funcMen.getProjeto().getDescricao());
+        funcHor.setProjeto(proj1);
+        System.out.println("O funcionario horista " + funcHor.getNome() + 
+                           " está alocado no projeto " + funcHor.getProjeto().getDescricao());
+        funcCom.setProjeto(proj1);
+        System.out.println("O funcionario comissionado " + funcCom.getNome() + 
+                           " está alocado no projeto " + funcCom.getProjeto().getDescricao());
         
         proj1.setDtInicio("01/03/2025");
         proj1.setDtTermino("01/03/2026");
