@@ -44,7 +44,7 @@ public class Departamento {
         System.out.println("Nome: " + nome);
         System.out.println("Qtde de Funcionários: " + numFunc);
         
-        System.out.println("\nREGISTRO     NOME                      CARGO");
+        System.out.println("\nREGISTRO       NOME                      CARGO");
         System.out.println("----------------------------------------------------------");
 
         for (cont = 0; cont < numFunc; cont++) {
