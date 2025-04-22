@@ -34,7 +34,8 @@ public class Professor extends Pessoa {
         this.areaAtuacao = areaAtuacao;
     }
     public void addTurma(Turma t){
-        turmas.add(t);     
+        turmas.add(t);
+        t.setProfessor(this);
     }
     
     

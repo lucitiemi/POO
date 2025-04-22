@@ -15,7 +15,6 @@ public class Aplic {
        Turma turma = new Turma("A", 2);
        
        turma.setCurso(curso);
-       turma.setProfessor(prof);
        prof.addTurma(turma);
        
        Aluno[] tabAlunos = new Aluno[2];

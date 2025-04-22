@@ -37,6 +37,7 @@ public abstract class Pessoa {
     public void addPedido(PedidoCompra p){
         pedidos.add(p);
         totalCompras += p.getValor();
+        p.setPessoa(this);
     }
     public void listarPedidos() {
         int cont=0;

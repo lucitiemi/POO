@@ -95,11 +95,9 @@ public class Aplic {
             do {
                 switch (tipo){
                     case 1:
-                        cadPedidos[cont].setPessoa(pf);
                         pf.addPedido(cadPedidos[cont]);
                         break;
                     case 2:
-                        cadPedidos[cont].setPessoa(pj);
                         pj.addPedido(cadPedidos[cont]);
                         break;
                     default:
