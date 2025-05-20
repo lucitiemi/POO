@@ -25,9 +25,9 @@ public class DaoAluno {
             ps = conn.prepareStatement("SELECT * from tblAluno where Ra_Alu = ?");
             
             ps.setInt(1, ra);
-            ResultSet rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery(); // executeQuery -> instrucoes de consulta (nao altera do BD)
            
-            if (rs.next() == true) {
+            if (rs.next()) {
                 objAlu = new Aluno(rs.getInt("Ra_Alu"),rs.getString("Nome_Alu"));
                 objAlu.setNota1(rs.getDouble("Nota1_Alu"));
                 objAlu.setNota2(rs.getDouble("Nota2_Alu"));
@@ -42,13 +42,13 @@ public class DaoAluno {
     public void inserir(Aluno objAlu) {
         PreparedStatement ps;
         try {
-            ps = conn.prepareStatement("INSERT INTO tblAluno(ra_Alu, Nome_Alu, Nota1_Alu, Nota2_Alu) VALUES(?,?,?,?)");
+            ps = conn.prepareStatement("INSERT INTO tblAluno(ra_Alu, Nome_Alu, Nota1_Alu, Nota2_Alu) VALUES(?,?,?,?)"); // ? -> posicional
             ps.setInt(1, objAlu.getRa());
             ps.setString(2, objAlu.getNome());
             ps.setDouble(3, objAlu.getNota1());
             ps.setDouble(4, objAlu.getNota2());
                       
-            ps.execute(); //envia a instrução SQL para o SGBD
+            ps.execute(); //envia a instrução SQL para o SGBD --- execute() -> instrucoes de mudança no BD
         } catch (SQLException ex) {
              System.out.println(ex.toString());   
         }
