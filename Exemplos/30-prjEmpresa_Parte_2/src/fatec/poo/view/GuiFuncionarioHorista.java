@@ -252,8 +252,8 @@ public class GuiFuncionarioHorista extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         prepCon = new PreparaConexao("LTS","lutiemi");
-       prepCon.setDriver("oracle.jdbc.driver.OracleDriver");
-       prepCon.setConnectionString("jdbc:oracle:thin:@127.0.0.1:1521/XEPDB1");
+        prepCon.setDriver("oracle.jdbc.driver.OracleDriver");
+        prepCon.setConnectionString("jdbc:oracle:thin:@127.0.0.1:1521/XEPDB1");
         daoFuncHor = new DaoFuncionarioHorista(prepCon.abrirConexao());
         
         //preencher o JComboBox cbxDepartamentos a partir da
@@ -367,7 +367,7 @@ public class GuiFuncionarioHorista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInserirActionPerformed
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
-       if (JOptionPane.showConfirmDialog(null, "Confirma Alteração?")== 0){//Sim
+        if (JOptionPane.showConfirmDialog(null, "Confirma Alteração?")== 0){//Sim
            funcHor.setNome(txtNome.getText());
            if (rdbFeminino.isSelected()){
                funcHor.setSexo("F");

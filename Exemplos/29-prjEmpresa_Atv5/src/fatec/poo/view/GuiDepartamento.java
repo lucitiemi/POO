@@ -213,34 +213,35 @@ public class GuiDepartamento extends javax.swing.JFrame {
         if (JOptionPane.showConfirmDialog(null, "Confirmar Alteração?") == 0){
             departamento.setNome(txtDepto.getText().toUpperCase());
             daoDepartamento.alterar(departamento);
+            
+            //Incializando a GUI
+            txtSigla.setText(null);
+            txtDepto.setText(null);
+            txtSigla.setEnabled(true);
+            txtDepto.setEnabled(false);
+            btnConsultar.setEnabled(true);
+            btnInserir.setEnabled(false);
+            btnAlterar.setEnabled(false);
+            btnExcluir.setEnabled(false);
+            txtSigla.requestFocus();
         }
-        
-        //Incializando a GUI
-        txtSigla.setText(null);
-        txtDepto.setText(null);
-        txtSigla.setEnabled(true);
-        txtDepto.setEnabled(false);
-        btnConsultar.setEnabled(true);
-        btnInserir.setEnabled(false);
-        btnAlterar.setEnabled(false);
-        btnExcluir.setEnabled(false);
-        txtSigla.requestFocus();
     }//GEN-LAST:event_btnAlterarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
         if(JOptionPane.showConfirmDialog(null, "Confirma Exclusão?") == 0){
             daoDepartamento.excluir(departamento);
+            
+            //Incializando a GUI
+            txtSigla.setText(null);
+            txtDepto.setText(null);
+            txtSigla.setEnabled(true);
+            txtDepto.setEnabled(false);
+            btnConsultar.setEnabled(true);
+            btnInserir.setEnabled(false);
+            btnAlterar.setEnabled(false);
+            btnExcluir.setEnabled(false);
+            txtSigla.requestFocus();
         }
-        //Incializando a GUI
-        txtSigla.setText(null);
-        txtDepto.setText(null);
-        txtSigla.setEnabled(true);
-        txtDepto.setEnabled(false);
-        btnConsultar.setEnabled(true);
-        btnInserir.setEnabled(false);
-        btnAlterar.setEnabled(false);
-        btnExcluir.setEnabled(false);
-        txtSigla.requestFocus();
     }//GEN-LAST:event_btnExcluirActionPerformed
 
 

@@ -252,47 +252,47 @@ public class GuiProjeto extends javax.swing.JFrame {
             projeto.setDtInicio(txtDtInicio.getText().toUpperCase());
             projeto.setDtTermino(txtDtTermino.getText().toUpperCase());
             daoProjeto.alterar(projeto);
-        }
-        
-        // inicializando a GUI
-        txtCodigo.setText(null);
-        txtDescricao.setText(null);
-        txtDtInicio.setText(null);
-        txtDtTermino.setText(null);
-        
-        txtCodigo.setEnabled(true);
-        txtDescricao.setEnabled(false);
-        txtDtInicio.setEnabled(false);
-        txtDtTermino.setEnabled(false);
-        txtCodigo.requestFocus();
+            
+            // inicializando a GUI
+            txtCodigo.setText(null);
+            txtDescricao.setText(null);
+            txtDtInicio.setText(null);
+            txtDtTermino.setText(null);
 
-        btnConsultar.setEnabled(true);
-        btnInserir.setEnabled(false);
-        btnAlterar.setEnabled(false);
-        btnExcluir.setEnabled(false);
+            txtCodigo.setEnabled(true);
+            txtDescricao.setEnabled(false);
+            txtDtInicio.setEnabled(false);
+            txtDtTermino.setEnabled(false);
+            txtCodigo.requestFocus();
+
+            btnConsultar.setEnabled(true);
+            btnInserir.setEnabled(false);
+            btnAlterar.setEnabled(false);
+            btnExcluir.setEnabled(false);
+        }
     }//GEN-LAST:event_btnAlterarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
         if(JOptionPane.showConfirmDialog(null, "Confirmar Exclusão?") == 0){
             daoProjeto.excluir(projeto);
-        }
-        
-        // inicializando a GUI
-        txtCodigo.setText(null);
-        txtDescricao.setText(null);
-        txtDtInicio.setText(null);
-        txtDtTermino.setText(null);
-        
-        txtCodigo.setEnabled(true);
-        txtDescricao.setEnabled(false);
-        txtDtInicio.setEnabled(false);
-        txtDtTermino.setEnabled(false);
-        txtCodigo.requestFocus();
+            
+            // inicializando a GUI
+            txtCodigo.setText(null);
+            txtDescricao.setText(null);
+            txtDtInicio.setText(null);
+            txtDtTermino.setText(null);
 
-        btnConsultar.setEnabled(true);
-        btnInserir.setEnabled(false);
-        btnAlterar.setEnabled(false);
-        btnExcluir.setEnabled(false);
+            txtCodigo.setEnabled(true);
+            txtDescricao.setEnabled(false);
+            txtDtInicio.setEnabled(false);
+            txtDtTermino.setEnabled(false);
+            txtCodigo.requestFocus();
+
+            btnConsultar.setEnabled(true);
+            btnInserir.setEnabled(false);
+            btnAlterar.setEnabled(false);
+            btnExcluir.setEnabled(false);
+        }
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     

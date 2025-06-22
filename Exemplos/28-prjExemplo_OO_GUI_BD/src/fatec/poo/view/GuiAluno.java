@@ -282,29 +282,31 @@ public class GuiAluno extends javax.swing.JFrame {
            aluno.setNota1(Double.parseDouble(txtNota1.getText()));
            aluno.setNota2(Double.parseDouble(txtNota2.getText()));
            daoAluno.alterar(aluno);
+           
+           //Incializando a GUI 
+            txtRa.setText(null);
+            txtNome.setText(null);
+            txtNota1.setText(null);
+            txtNota2.setText(null);
+            lblMedia.setText(null);
+            lblSituacao.setText(null);
+            txtRa.setEnabled(true); 
+            txtNome.setEnabled(false);
+            txtNota1.setEnabled(false);
+            txtNota2.setEnabled(false); 
+            txtRa.requestFocus();
+            btnConsultar.setEnabled(true);
+            btnInserir.setEnabled(false);
+            btnAlterar.setEnabled(false);
+            btnExcluir.setEnabled(false); 
         }      
-        //Incializando a GUI 
-        txtRa.setText(null);
-        txtNome.setText(null);
-        txtNota1.setText(null);
-        txtNota2.setText(null);
-        lblMedia.setText(null);
-        lblSituacao.setText(null);
-        txtRa.setEnabled(true); 
-        txtNome.setEnabled(false);
-        txtNota1.setEnabled(false);
-        txtNota2.setEnabled(false); 
-        txtRa.requestFocus();
-        btnConsultar.setEnabled(true);
-        btnInserir.setEnabled(false);
-        btnAlterar.setEnabled(false);
-        btnExcluir.setEnabled(false); 
     }//GEN-LAST:event_btnAlterarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
         if (JOptionPane.showConfirmDialog(null, "Confirma Exclusão?") == 0){
             daoAluno.excluir(aluno); 
             
+            //Incializando a GUI 
             txtRa.setText(null);
             txtNome.setText(null);
             txtNota1.setText(null);
